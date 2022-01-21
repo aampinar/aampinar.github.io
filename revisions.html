@@ -3,26 +3,30 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <title>Revisions</title>
-    <meta name="author" content="Ampinario's Personal Website">
-    <meta name="description" content="Project Revisions">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/ico" href="Images/favicon.ico">
-    <style>
-            .body {
-        margin: 0px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        margin-left: auto;
-        margin-right: auto;
-        background-color: #e6e4d9;}
+  <meta charset="utf-8">
+  <title>Revisions</title>
+  <meta name="author" content="Ampinario's Personal Website">
+  <meta name="description" content="Project Revisions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/ico" href="Images/favicon.ico">
+  <style>
+    .body {
+      margin: 0px;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #e6e4d9;
+    }
 
 
-        .topnav {
+    .topnav {
       overflow: hidden;
       background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
     }
-    
+
     .topnav a {
       float: left;
       color: #f2f2f2;
@@ -31,26 +35,51 @@
       text-decoration: none;
       font-size: 17px;
     }
-    
+
     .topnav a:hover {
       background-color: #ddd;
       color: black;
     }
-    
+
     .topnav a.active {
       background-color: #0295b9;
       color: white;
     }
-    </style>
+
+    h1 {text-align: center;}
+
+  </style>
 </head>
 
 <Body class="body">
-    <div class="topnav">
-        <a class="active" href="Index.html">Home</a>
-        <a href="Cooking.html">Recipes</a>
-        <a href="Revisions.html">Revisions</a>
-      </div>
-
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="cooking.html">Recipes</a>
+    <a class="active" href="revisions.html">Revisions</a>
+  </div>
+  <br>
+  <br>
+  <br>
+  <h1> Revisions</h1>
+  
+  <p>
+    I spoke with my colleague Kris Roldan and he provided very constructuve feedback to my site. 
+  </p>
+  
+  <script>
+    window.onscroll = function() {myFunction()};
+    
+    var topnav = document.getElementById("topnav");
+    var sticky = topnav.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        topnav.classList.add("sticky")
+      } else {
+        topnav.classList.remove("sticky");
+      }
+    }
+    </script>
 
 </Body>
 

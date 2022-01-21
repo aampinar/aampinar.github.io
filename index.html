@@ -67,7 +67,7 @@ figure {
   
 }
 .mainportrait:hover {
-  animation: shake 0.5s;
+  animation: shake 2s;
   animation-iteration-count: infinite;
 }
 @keyframes shake {
@@ -84,8 +84,11 @@ figure {
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 .topnav {
-      overflow: hidden;
+     overflow: hidden;
       background-color: #333;
+      position: fixed;
+      top: 0;
+      width: 100%;
     }
     
     .topnav a {
@@ -106,19 +109,29 @@ figure {
       background-color: #0295b9;
       color: white;
     }
+
+    .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding-top: 60px;
+    }
     </style>
 </head>
 <Body>
     <div class="topnav">
-        <a class="active" href="Index.html">Home</a>
-        <a href="Cooking.html">Recipes</a>
-        <a href="Revisions.html">Revisions</a>
+        <a class="active" href="index.html">Home</a>
+        <a href="cooking.html">Recipes</a>
+        <a href="revisions.html">Revisions</a>
       </div>
     <div style="width:1000px;margin-left: auto;margin-right: auto;">
     
 <main id="main">
 <article>
-<header>
+<br>
+<br>
+<br>
+    <header>
     <h1 style="text-align: center;">About Me</h1>
 </header>
 <img src="Images/Portrait.JPG" width="300px" alt="portrait" class="mainportrait"/>
@@ -149,10 +162,24 @@ Bonus Question: What is the Ostrich Algorithm? (Fun)
     <p>
         Click the Ostrich to find out!
     </p>
-    <a href="https://www.linkedin.com/posts/javascript-developer_activity-6885121977103847424-TfQb">
+    <a href="https://www.linkedin.com/posts/javascript-developer_activity-6885121977103847424-TfQb" target="_blank">
     <img src="Images/ostrich.png" width="50" alt="ostrich"/></a>
 </section>
 </main>
+<script>
+    window.onscroll = function() {myFunction()};
+    
+    var topnav = document.getElementById("topnav");
+    var sticky = topnav.offsetTop;
+    
+    function myFunction() {
+      if (window.pageYOffset >= sticky) {
+        topnav.classList.add("sticky")
+      } else {
+        topnav.classList.remove("sticky");
+      }
+    }
+    </script>
 <footer>
     <p> Contact Me For Feedback On My Site via <a href="mailto:aampinar@gmail.com">Email</a></p>
 <small>
