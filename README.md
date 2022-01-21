@@ -1,1 +1,0 @@
-# aampinar.github.io
